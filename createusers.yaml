@@ -1,0 +1,13 @@
+---
+  - name: cresting user with Ansible
+    hosts: all
+    vars_files:
+        - users.yml
+    tasks:
+    - name: creating devops user shivag
+      ansible.builtin.user:
+        name: "{{ item.name }}"
+        group: "{{ item.group }}"
+        state: present
+        remove: false
+

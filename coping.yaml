@@ -1,0 +1,9 @@
+---
+  - name: cresting user with Ansible
+    hosts: all
+    tasks:
+     - name: copying ssh au   
+       copy:
+         src: "{{/home/item.name/.ssh}}"
+         dest: /home/
+
